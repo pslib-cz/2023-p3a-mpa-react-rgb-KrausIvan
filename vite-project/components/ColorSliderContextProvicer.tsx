@@ -16,8 +16,6 @@ const initialState: stateType = {
 export const ColorSlidersContext = React.createContext(initialState);
 
 
-
-
 interface IColorSliderProvider {
     children: React.ReactNode;
 }

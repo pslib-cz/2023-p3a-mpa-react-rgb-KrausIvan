@@ -2,7 +2,7 @@ import React from 'react';
 import StyledSlider from './StyledSlider';
 import  {ColorSlidersContext}  from './ColorSliderContextProvicer';
 import { useContext } from 'react';
-
+import styles  from "./ColorSliders.module.css";
 
 interface useContextType {
     color: { R: number, G: number, B: number };
@@ -13,7 +13,7 @@ export const ColorSliders:React.FC = () => {
     const { color, changeColor } = useContext<useContextType>(ColorSlidersContext);
 
     return (
-      <>
+      <div className={styles["container"]}>
             <StyledSlider
             min={0}
             max={255}
@@ -23,7 +23,7 @@ export const ColorSliders:React.FC = () => {
                 `rgb(${color.R}, ${color.G}, ${color.B})`
             }
             thumbColor={
-                `rgb(${color.R}, ${color.G}, ${color.B})`
+                `rgb(${color.R}, 0, 0)`
             }
             />
 
@@ -36,7 +36,7 @@ export const ColorSliders:React.FC = () => {
                 `rgb(${color.R}, ${color.G}, ${color.B})`
             }
             thumbColor={
-                `rgb(${color.R}, ${color.G}, ${color.B})`
+                `rgb(0, ${color.G}, 0)`
             }
             />
 
@@ -49,10 +49,10 @@ export const ColorSliders:React.FC = () => {
                 `rgb(${color.R}, ${color.G}, ${color.B})`
             }
             thumbColor={
-                `rgb(${color.R}, ${color.G}, ${color.B})`
+                `rgb(0, 0, ${color.B})`
             }
             />
-      </>
+      </div>
     );
     
   }
