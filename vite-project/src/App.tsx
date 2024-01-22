@@ -4,6 +4,7 @@ function App() {
 
   return (
     <>
+      <h1>Nemám rád MPA - Ivan Kraus</h1>
       <ColorSliders />
     </>
   )
