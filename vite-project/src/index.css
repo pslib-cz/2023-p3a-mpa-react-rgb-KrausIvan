@@ -30,7 +30,8 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom right, red, yellow);
+  background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
 
 h1 {
